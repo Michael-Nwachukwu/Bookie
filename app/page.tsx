@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Playfair_Display } from "next/font/google";
 import { ArrowDownIcon } from '@heroicons/react/24/outline';
+import { About } from '../components/chunk/About';
 
 const Playfair = Playfair_Display({ subsets: ["latin"] });
 
@@ -34,7 +35,7 @@ export default function Home() {
               </nav>
               <div className="inline-flex items-center gap-4 text-sm">
                 <button className="px-4 py-1 rounded-2xl border bg-transparent">Meet</button>
-                <button className="px-4 py-1 rounded-2xl bg-blue-800">Book now</button>
+                <button className="px-4 py-1 rounded-2xl bg-black">Book now</button>
               </div>
             </header>
 
@@ -51,6 +52,9 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </section>
+      <section className="bg-black min-h-screen py-16">
+        <About />
       </section>
     </main>
   );
