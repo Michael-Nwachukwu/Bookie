@@ -2,6 +2,10 @@ import Image from "next/image";
 import { Playfair_Display } from "next/font/google";
 import { ArrowDownIcon } from '@heroicons/react/24/outline';
 import { About } from '../components/chunk/About';
+import { Features } from "@/components/chunk/Features";
+import GridSmallBackgroundDemo  from "@/components/ui/gridSmallBackground";
+import Availability from "@/components/chunk/Availability";
+import Testimonial from "@/components/chunk/Testimonial";
 
 const Playfair = Playfair_Display({ subsets: ["latin"] });
 
@@ -53,8 +57,19 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="bg-black min-h-screen py-16">
+      <section className="bg-black min-h-screen space-y-28 pb-16">
+
         <About />
+        
+        <Features font={Playfair.className} />
+        
+      </section>
+      <section>
+        <GridSmallBackgroundDemo Component={Availability} />
+      </section>
+
+      <section className="bg-black">
+        <Testimonial />
       </section>
     </main>
   );
