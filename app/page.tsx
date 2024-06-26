@@ -5,7 +5,8 @@ import { About } from '../components/chunk/About';
 import { Features } from "@/components/chunk/Features";
 import GridSmallBackgroundDemo  from "@/components/ui/gridSmallBackground";
 import Availability from "@/components/chunk/Availability";
-import Testimonial from "@/components/chunk/Testimonial";
+import { Cta } from "@/components/chunk/Cta";
+import { Testimonial } from "@/components/chunk/Testimonial";
 
 const Playfair = Playfair_Display({ subsets: ["latin"] });
 
@@ -68,8 +69,12 @@ export default function Home() {
         <GridSmallBackgroundDemo Component={Availability} />
       </section>
 
-      <section className="bg-black">
+      <section className="bg-black pb-20 px-48">
         <Testimonial />
+      </section>
+
+      <section className="bg-black">
+        <Cta />
       </section>
     </main>
   );
