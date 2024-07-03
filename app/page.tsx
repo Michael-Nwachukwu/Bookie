@@ -7,10 +7,16 @@ import GridSmallBackgroundDemo  from "@/components/ui/gridSmallBackground";
 import Availability from "@/components/chunk/Availability";
 import { Cta } from "@/components/chunk/Cta";
 import { Testimonial } from "@/components/chunk/Testimonial";
+import { FaqAccordion } from "@/components/chunk/Faq";
+import Footer from "@/components/chunk/Footer";
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import HeroText from "@/components/chunk/HeroText";
 
 const Playfair = Playfair_Display({ subsets: ["latin"] });
 
 export default function Home() {
+
   return (
     <main>
       <section className="w-full h-screen">
@@ -40,16 +46,39 @@ export default function Home() {
               </nav>
               <div className="inline-flex items-center gap-4 text-sm">
                 <button className="px-4 py-1 rounded-2xl border bg-transparent">Meet</button>
-                <button className="px-4 py-1 rounded-2xl bg-black">Book now</button>
+                <button className="px-4 py-1 rounded-2xl bg-indigo-800">Book now</button>
               </div>
             </header>
 
             <div className="pb-24 flex justify-between w-full items-end">
-              <h1 className={`${Playfair.className} text-7xl text-white tracking-wide font-semibol`}>
-                Making <br />
-                Businesses Grow.
-              </h1>
 
+              <div className="flex flex-col items-start gap-6">
+                
+                
+                <HeroText />
+
+
+                <div className="w-full max-w-md relative flex items-center">
+                  <Input type="email" placeholder="Email" className="bg-transparent py-4 pl-4 placeholder:text-white rounded-3xl h-12 flex-grow focus:ring-indigo-800 focus:border-none text-white" />
+                  <Button type="submit" className="ml-3 bg-indigo-800 text-white rounded-3xl h-12 flex items-center justify-center">Subscribe</Button>
+                </div>
+
+                {/* <div className="w-full max-w-md relative pl-2">
+                  <Input
+                    type="email"
+                    placeholder="Email"
+                    className="bg-transparent py-4 placeholder:text-white rounded-3xl h-12 pr-16" // Added padding-right to avoid overlap
+                  />
+                  <Button
+                    type="submit"
+                    className="absolute right-1 top-1/2 transform -translate-y-1/2 bg-indigo-800 text-white rounded-3xl h-9 flex items-center justify-center"
+                  >
+                    Subscribe
+                  </Button>
+                </div> */} 
+
+
+              </div>
               <div className="w-10 h-10 rounded-full bg-slate-50/15 flex justify-center items-center hover:bg-black hover:scale-125 duration-300">
                 <ArrowDownIcon className="size-5 text-white" />
               </div>
@@ -69,13 +98,17 @@ export default function Home() {
         <GridSmallBackgroundDemo Component={Availability} />
       </section>
 
-      <section className="bg-black pb-20 px-48">
+      <section className="bg-black pb-20 px-48 space-y-32 bg">
         <Testimonial />
+        <FaqAccordion />
       </section>
 
       <section className="bg-black">
         <Cta />
       </section>
+
+      <Footer />
+
     </main>
   );
 }

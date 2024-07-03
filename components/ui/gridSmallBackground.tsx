@@ -10,9 +10,9 @@ const GridSmallBackgroundDemo: React.FC<BgComponentProps> = ({ Component }) => {
         {/* Radial gradient for the container to give a faded look */}
         <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
         
-        
         {/* Render the passed component */}
         <Component />
+        
       </div>
     );
 };

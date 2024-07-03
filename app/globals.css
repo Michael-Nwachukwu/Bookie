@@ -116,3 +116,8 @@ body {
   bottom: 0;
   z-index: -1;
 }
+
+.bg{
+  background-image: url('/oooscillate1.svg');
+  /* background-repeat: no-repeat; */
+}
