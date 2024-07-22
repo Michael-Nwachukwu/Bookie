@@ -22,7 +22,7 @@ const HeroText = () => {
 
     return (
         <div>
-            <h1 className="text-2xl md:text-7xl font-bold text-white dark:text-white">
+            <h1 className="text-4xl md:text-7xl font-bold text-white dark:text-white">
                   The Perfect Venue
                   <br />
                   for <span>{isLoaded ? <FlipWords words={words} className="text-white" /> : 'Any Event'}</span>

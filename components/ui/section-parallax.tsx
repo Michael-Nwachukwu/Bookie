@@ -103,14 +103,12 @@ export const SectionParallax = ({
 
 export const Header = () => {
   return (
-    <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-12 w-full  left-0 top-0">
-      <h1 className="text-2xl md:text-7xl font-bold text-white dark:text-white">
-        The Ultimate <br /> development studio
+    <div className="max-w-7xl relative mx-auto py-20 md:py-40 pl-5 sm:px-12 w-full left-0 top-0">
+      <h1 className="text-5xl md:text-7xl font-bold text-white">
+        Unveiling the Heart <br /> of Celebration
       </h1>
-      <p className="max-w-2xl text-base md:text-xl mt-8 text-white dark:text-neutral-200">
-        We build beautiful products with the latest technologies and frameworks.
-        We are a team of passionate developers and designers that love to build
-        amazing products.
+      <p className="max-w-2xl text-xl md:text-xl mt-8 text-white">
+        Where Every Event Finds Its Perfect Setting: Embrace Elegance, Comfort, and Unforgettable Moments
       </p>
     </div>
   );

@@ -12,23 +12,23 @@ import Image from "next/image"
 const features = [
   {
     src: "/gallery/pexels-quark-studio-1159039-2507016 (2).jpg",
-    title: "Parking Space",
-    description: "Discussion",
+    title: "clean up zone",
+    description: "Restroom facilities",
   },
   {
     src: "/gallery/parkinglot.jpg",
-    title: "Spacious Area",
-    description: "Comfortable Setup",
+    title: "Parking Space",
+    description: "Comfortable Parking",
   },
   {
     src: "/gallery/pexels-pixabay-236092.jpg",
     title: "Beautiful Decor",
-    description: "Elegant Atmosphere",
+    description: "Elegant Lighting",
   },
   {
     src: "/gallery/lockerroom.jpg",
     title: "Modern Facilities",
-    description: "Fully Equipped",
+    description: "Storage spaces",
   },
 ];
 
@@ -36,12 +36,12 @@ export function Features({font} : any) {
   return (
     <div className="space-y-14">
 
-      <div className="flex justify-between items-start text-white py-16 px-10">
-        <div className="w-2/4">
-          <h2 className={`text-5xl tracking-wide ${font}`}>We are Steve Edge Design. A global brand & digital design agency.</h2>
+      <div className="flex flex-col sm:flex-row justify-between items-start text-white py-5 sm:py-16 px-4 sm:px-10 gap-5 sm:gap-0">
+        <div className="sm:w-2/4">
+          <h2 className={`text-4xl sm:text-5xl tracking-wide ${font}`}>Features of Our Premier Event Tent</h2>
         </div>
-        <div className="w-2/4 flex justify-end it">
-          <p className={`text-md ${font}`}>More on Steve Edge Design</p>
+        <div className="sm:w-2/4 flex justify-end items-end">
+          <p className={`text-md ${font}`}>Experience Excellence</p>
         </div>
       </div>
 
@@ -53,7 +53,7 @@ export function Features({font} : any) {
 
                 <img src={feature.src} className="w-full h-full object-cover feature-img" alt="" />
 
-                <div className="absolute bg-black/5 top-0 left-0 w-full h-full p-14">
+                <div className="absolute bg-black/5 top-0 left-0 w-full h-full p-7 sm:p-14">
                   <div className="flex flex-col justify-between items-start h-full text-white">
                     <div className="flex flex-col items-start justify-start uppercase gap-2">
                       <span className="text-xs">{feature.title}</span>
@@ -71,68 +71,52 @@ export function Features({font} : any) {
         <CarouselNext />
       </Carousel>
 
-      <div className="px-20">
+      <div className="px-4 sm:px-20">
         <div className="px-4 sm:px-0">
-          <h3 className="text-base font-semibold leading-7 text-gray-400">Applicant Information</h3>
-          <p className="mt-1 max-w-2xl text-sm leading-6 text-gray-500">Personal details and application.</p>
+          <h3 className="text-base font-semibold leading-7 text-gray-400">Specifications, Facilities and Services</h3>
         </div>
         <div className="mt-6 border-t-[0.5px] border-gray-500">
           <dl className="divide-y-[0.5px] divide-gray-500 div">
-            <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-              <dt className="text-sm font-medium leading-6 text-gray-400">Full name</dt>
-              <dd className="mt-1 text-sm leading-6 text-gray-300 sm:col-span-2 sm:mt-0">Margot Foster</dd>
+            <div className="px-2 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+              <dt className="text-sm font-medium leading-6 text-gray-400">Size</dt>
+              <dd className="mt-1 text-sm leading-6 text-gray-300 sm:col-span-2 sm:mt-0">60 feet x 120 feet (7200 square feet)</dd>
             </div>
-            <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-              <dt className="text-sm font-medium leading-6 text-gray-400">Application for</dt>
-              <dd className="mt-1 text-sm leading-6 text-gray-300 sm:col-span-2 sm:mt-0">Backend Developer</dd>
+            <div className="px-2 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+              <dt className="text-sm font-medium leading-6 text-gray-400">Capacity</dt>
+              <dd className="mt-1 text-sm leading-6 text-gray-300 sm:col-span-2 sm:mt-0">Up to 300 guests</dd>
             </div>
-            <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-              <dt className="text-sm font-medium leading-6 text-gray-400">Email address</dt>
-              <dd className="mt-1 text-sm leading-6 text-gray-300 sm:col-span-2 sm:mt-0">margotfoster@example.com</dd>
+            <div className="px-2 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+              <dt className="text-sm font-medium leading-6 text-gray-400">Height</dt>
+              <dd className="mt-1 text-sm leading-6 text-gray-300 sm:col-span-2 sm:mt-0">Peak height at 30 feet</dd>
             </div>
-            <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-              <dt className="text-sm font-medium leading-6 text-gray-400">Salary expectation</dt>
-              <dd className="mt-1 text-sm leading-6 text-gray-300 sm:col-span-2 sm:mt-0">$120,000</dd>
+            <div className="px-2 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+              <dt className="text-sm font-medium leading-6 text-gray-400">Accessibility</dt>
+              <dd className="mt-1 text-sm leading-6 text-gray-300 sm:col-span-2 sm:mt-0">Wheelchair accessible, ADA-compliant</dd>
             </div>
-            <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-              <dt className="text-sm font-medium leading-6 text-gray-400">About</dt>
-              <dd className="mt-1 text-sm leading-6 text-gray-300 sm:col-span-2 sm:mt-0">Fugiat ipsum ipsum deserunt culpa aute sint do nostrud anim incididunt cillum culpa consequat. Excepteur qui ipsum aliquip consequat sint. Sit id mollit nulla mollit nostrud in ea officia proident. Irure nostrud pariatur mollit ad adipisicing reprehenderit deserunt qui eu.</dd>
+            <div className="px-2 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+              <dt className="text-sm font-medium leading-6 text-gray-400">Parking</dt>
+              <dd className="mt-1 text-sm leading-6 text-gray-300 sm:col-span-2 sm:mt-0">On-site parking available for 100+ vehicles</dd>
             </div>
-            <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-              <dt className="text-sm font-medium leading-6 text-gray-400">Attachments</dt>
-              <dd className="mt-2 text-sm text-gray-400 sm:col-span-2 sm:mt-0">
-                <ul role="list" className="divide-y divide-gray-500 rounded-md border border-gray-200">
-                  <li className="flex items-center justify-between py-4 pl-4 pr-5 text-sm leading-6">
-                    <div className="flex w-0 flex-1 items-center">
-                      <svg className="h-5 w-5 flex-shrink-0 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                        <path fill-rule="evenodd" d="M15.621 4.379a3 3 0 00-4.242 0l-7 7a3 3 0 004.241 4.243h.001l.497-.5a.75.75 0 011.064 1.057l-.498.501-.002.002a4.5 4.5 0 01-6.364-6.364l7-7a4.5 4.5 0 016.368 6.36l-3.455 3.553A2.625 2.625 0 119.52 9.52l3.45-3.451a.75.75 0 111.061 1.06l-3.45 3.451a1.125 1.125 0 001.587 1.595l3.454-3.553a3 3 0 000-4.242z" clip-rule="evenodd" />
-                      </svg>
-                      <div className="ml-4 flex min-w-0 flex-1 gap-2">
-                        <span className="truncate font-medium">resume_back_end_developer.pdf</span>
-                        <span className="flex-shrink-0 text-gray-400">2.4mb</span>
-                      </div>
-                    </div>
-                    <div className="ml-4 flex-shrink-0">
-                      <a href="#" className="font-medium text-indigo-600 hover:text-indigo-500">Download</a>
-                    </div>
-                  </li>
-                  <li className="flex items-center justify-between py-4 pl-4 pr-5 text-sm leading-6">
-                    <div className="flex w-0 flex-1 items-center">
-                      <svg className="h-5 w-5 flex-shrink-0 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                        <path fill-rule="evenodd" d="M15.621 4.379a3 3 0 00-4.242 0l-7 7a3 3 0 004.241 4.243h.001l.497-.5a.75.75 0 011.064 1.057l-.498.501-.002.002a4.5 4.5 0 01-6.364-6.364l7-7a4.5 4.5 0 016.368 6.36l-3.455 3.553A2.625 2.625 0 119.52 9.52l3.45-3.451a.75.75 0 111.061 1.06l-3.45 3.451a1.125 1.125 0 001.587 1.595l3.454-3.553a3 3 0 000-4.242z" clip-rule="evenodd" />
-                      </svg>
-                      <div className="ml-4 flex min-w-0 flex-1 gap-2">
-                        <span className="truncate font-medium">coverletter_back_end_developer.pdf</span>
-                        <span className="flex-shrink-0 text-gray-400">4.5mb</span>
-                      </div>
-                    </div>
-                    <div className="ml-4 flex-shrink-0">
-                      <a href="#" className="font-medium text-indigo-600 hover:text-indigo-500">Download</a>
-                    </div>
-                  </li>
-                </ul>
-              </dd>
+            <div className="px-2 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+              <dt className="text-sm font-medium leading-6 text-gray-400">Restrooms</dt>
+              <dd className="mt-1 text-sm leading-6 text-gray-300 sm:col-span-2 sm:mt-0">Modern, clean restroom facilities</dd>
             </div>
+
+            <div className="px-2 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+              <dt className="text-sm font-medium leading-6 text-gray-400">Security</dt>
+              <dd className="mt-1 text-sm leading-6 text-gray-300 sm:col-span-2 sm:mt-0">On-site security personnel during events</dd>
+            </div>
+
+            <div className="px-2 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+              <dt className="text-sm font-medium leading-6 text-gray-400">Power supply</dt>
+              <dd className="mt-1 text-sm leading-6 text-gray-300 sm:col-span-2 sm:mt-0">Reliable power supply with backup generators</dd>
+            </div>
+
+            <div className="px-2 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+              <dt className="text-sm font-medium leading-6 text-gray-400">Setup and Cleanup</dt>
+              <dd className="mt-1 text-sm leading-6 text-gray-300 sm:col-span-2 sm:mt-0">Included in rental fee</dd>
+            </div>
+            
           </dl>
         </div>
       </div>

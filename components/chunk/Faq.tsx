@@ -11,8 +11,8 @@ const Playfair = Playfair_Display({ subsets: ["latin"] });
 export function FaqAccordion () {
 
     return (
-        <div className="space-y-12">
-            <h1 className={`${Playfair.className} text-7xl font-medium uppercase bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500`}>Nice to knows</h1>
+        <div className="space-y-12 px-2 sm:px-0">
+            <h1 className={`${Playfair.className} text-4xl sm:text-5xl font-medium uppercase bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500`}>Nice to knows</h1>
             <Accordion type="single" collapsible className="w-full text-white">
                 <AccordionItem value="item-1">
                     <AccordionTrigger>Is it accessible?</AccordionTrigger>

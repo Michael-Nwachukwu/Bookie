@@ -8,8 +8,12 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel"
+import { Playfair_Display } from "next/font/google";
+
+const Playfair = Playfair_Display({ subsets: ["latin"] });
 
 export function Testimonial() {
+
     const plugin = React.useRef(
         Autoplay({ delay: 2000, })
     )
@@ -56,7 +60,9 @@ export function Testimonial() {
 
     return (
         <>
-            <div className="grid grid-cols-3 gap-y-4 gap-x-2">
+            <h1 className={`${Playfair.className} text-4xl sm:text-5xl font-medium uppercase bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 pt-16 sm:pt-0`}>Recent events at our venue</h1>
+
+            <div className="grid grid-cols-3 gap-1 sm:gap-y-4 sm:gap-x-2">
                 <div className="col-span-2">
                     <Carousel
                         opts={{
@@ -68,8 +74,8 @@ export function Testimonial() {
                     >
                         <CarouselContent className="h-[17em]">
                             {testimonyOne.map((testimony, index) => (
-                                <CarouselItem key={index} className="rounded-2xl">
-                                    <img src={testimony} className="object-cover h-full rounded-2xl" alt="" />
+                                <CarouselItem key={index} className="">
+                                    <img src={testimony} className="object-cover h-full " alt="" />
                                 </CarouselItem>
                             ))}
                         </CarouselContent>
@@ -85,8 +91,8 @@ export function Testimonial() {
                     >
                         <CarouselContent className="h-64">
                             {testimonyTwo.map((testimony, index) => (
-                                <CarouselItem key={index} className="rounded-2xl">
-                                    <img src={testimony} className="object-cover h-full rounded-2xl" alt="" />
+                                <CarouselItem key={index} className="">
+                                    <img src={testimony} className="object-cover h-full " alt="" />
                                 </CarouselItem>
                             ))}
                         </CarouselContent>
@@ -102,8 +108,8 @@ export function Testimonial() {
                     >
                         <CarouselContent className="h-64">
                             {testimonyThree.map((testimony, index) => (
-                                <CarouselItem key={index} className="rounded-2xl">
-                                    <img src={testimony} className="object-cover h-full rounded-2xl" alt="" />
+                                <CarouselItem key={index} className="">
+                                    <img src={testimony} className="object-cover h-full " alt="" />
                                 </CarouselItem>
                             ))}
                         </CarouselContent>
@@ -120,8 +126,8 @@ export function Testimonial() {
                     >
                         <CarouselContent className="h-[17em]">
                             {testimonyFour.map((testimony, index) => (
-                                <CarouselItem key={index} className="rounded-2xl">
-                                    <img src={testimony} className="object-cover h-full rounded-2xl" alt="" />
+                                <CarouselItem key={index} className="">
+                                    <img src={testimony} className="object-cover h-full " alt="" />
                                 </CarouselItem>
                             ))}
                         </CarouselContent>

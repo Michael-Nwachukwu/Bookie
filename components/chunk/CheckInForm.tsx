@@ -53,10 +53,10 @@ export function CheckInForm() {
             <FormItem>
                 <FormLabel className="text-white">Email</FormLabel>
                 <FormControl>
-                    <Input placeholder="Randomuser@email.com" {...field} className="bg-black border-gray-500 sm:w-80 border-gradient-to-b from-neutral-200 to-neutral-500 text-white placeholder:text-gray-700" />
+                    <Input placeholder="Randomuser@email.com" {...field} className="bg-black border-gray-500 w-full sm:w-80 border-gradient-to-b from-neutral-200 to-neutral-500 text-white placeholder:text-gray-700" />
                 </FormControl>
                 <FormDescription className="text-gray-400">
-                    This is your public display name.
+                    Start your reservation process by entering your email.
                 </FormDescription>
                 <FormMessage />
             </FormItem>
