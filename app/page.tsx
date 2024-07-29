@@ -12,6 +12,7 @@ import Footer from "@/components/chunk/Footer";
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import HeroText from "@/components/chunk/HeroText";
+import { RegisterDialog } from "@/components/dialogs/register";
 
 const Playfair = Playfair_Display({ subsets: ["latin"] });
 
@@ -49,7 +50,8 @@ export default function Home() {
 
               <div className="sm:inline-flex items-center gap-4 text-sm hidden">
                 <button className="px-4 py-1 rounded-2xl border bg-transparent">Meet</button>
-                <button className="px-4 py-1 rounded-2xl bg-indigo-800">Book now</button>
+                {/* <button className="px-4 py-1 rounded-2xl bg-indigo-800">Book now</button> */}
+                <RegisterDialog />
               </div>
 
             </header>
